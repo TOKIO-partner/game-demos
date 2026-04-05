@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1775213339|2101261';
+const CACHE_VERSION = '1775369382|2180394';
 /** @type {string} */
 const CACHE_PREFIX = 'Moonlit Bonds-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
