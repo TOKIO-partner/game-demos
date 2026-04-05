@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1775385667|1996852';
+const CACHE_VERSION = '1775386902|2032121';
 /** @type {string} */
 const CACHE_PREFIX = 'Phantom Café-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
