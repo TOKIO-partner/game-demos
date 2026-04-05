@@ -112,8 +112,16 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":96999040,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":96999216,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
+// Cache busting: force re-download of .pck and .wasm
+const _origFetch = window.fetch;
+window.fetch = function(url, ...args) {
+	if (typeof url === 'string' && (url.endsWith('.pck') || url.endsWith('.wasm'))) {
+		url += '?v=20260406';
+	}
+	return _origFetch.call(this, url, ...args);
+};
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
