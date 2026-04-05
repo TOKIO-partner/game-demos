@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOKIO-partner Game Demos</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: linear-gradient(135deg, #1e1e3f 0%, #2a1a4a 50%, #3d1e5c 100%);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.container { max-width: 1000px; margin: 0 auto; }
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffd700, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle { text-align: center; opacity: 0.7; margin-bottom: 48px; }
+.games { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.game {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.game:hover { transform: translateY(-4px); border-color: rgba(255,215,0,0.4); }
+.game h2 { font-size: 1.4rem; margin-bottom: 8px; color: #ffd700; }
+.game p { opacity: 0.8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+.tag { display: inline-block; padding: 4px 10px; background: rgba(255,215,0,0.15); border-radius: 20px; font-size: 0.75rem; margin-right: 6px; }
+footer { text-align: center; margin-top: 48px; opacity: 0.5; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>TOKIO-partner Game Demos</h1>
+  <p class="subtitle">Playable web demos built with Godot 4.6</p>
+  <div class="games">
+    <a href="phantom-cafe/" class="game">
+      <h2>Phantom Cafe</h2>
+      <p>幽霊カフェを舞台に、ゴーストの未練を解きほぐすビジュアルノベル。6エピソードの物語と手がかり収集システム。</p>
+      <span class="tag">2D</span><span class="tag">Visual Novel</span><span class="tag">Mystery</span>
+    </a>
+    <a href="moonlit-bonds/" class="game">
+      <h2>Moonlit Bonds</h2>
+      <p>妖怪と絆を結ぶターン制バトルRPG。18種の妖怪、3つのダンジョン、ツクヨミボスチャレンジ。</p>
+      <span class="tag">2D</span><span class="tag">RPG</span><span class="tag">Turn-based</span>
+    </a>
+    <a href="drift-city-chronicles/" class="game">
+      <h2>Drift City Chronicles</h2>
+      <p>夜のネオン都市でバイク配達＆ドリフトレース。10ミッション、Drift Kingボス戦。</p>
+      <span class="tag">3D</span><span class="tag">Racing</span><span class="tag">Open World</span>
+    </a>
+  </div>
+  <footer>
+    Made with Godot 4.6 · Hosted on GitHub Pages
+  </footer>
+</div>
+</body>
+</html>
